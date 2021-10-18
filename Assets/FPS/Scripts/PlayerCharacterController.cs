@@ -33,7 +33,7 @@ public class PlayerCharacterController : MonoBehaviour
     [Tooltip("Multiplicator for the sprint speed (based on grounded speed)")]
     public float sprintSpeedModifier = 2f;
     [Tooltip("Height at which the player dies instantly when falling off the map")]
-    public float killHeight = -50f;
+    public float killHeight = 0.1f;
 
     [Header("Rotation")]
     [Tooltip("Rotation speed for moving the camera")]
