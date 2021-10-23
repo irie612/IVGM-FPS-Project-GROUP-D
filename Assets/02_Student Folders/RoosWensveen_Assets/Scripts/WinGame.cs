@@ -70,7 +70,6 @@ public void O() {
 
     void NextLine()
     {
-Debug.Log(index);
       if (index < lines.Length - 1)
       {
         index++;

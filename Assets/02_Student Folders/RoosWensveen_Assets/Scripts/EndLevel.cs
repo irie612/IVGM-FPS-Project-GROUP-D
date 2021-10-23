@@ -22,10 +22,18 @@ Debug.Log("....");
                 if(!visited) {
                     wingame.O();
                     visited = true;
+                    StartCoroutine(WaitForSceneLoad());
                     //SceneManager.LoadScene(RoosWensveen);
-                    SceneManager.LoadScene("RoosWensveen", LoadSceneMode.Additive);
+                    //SceneManager.LoadScene("MainMenuScene", LoadSceneMode.Additive);
                 }
             } 
         }
     }
+
+private IEnumerator WaitForSceneLoad() {
+     yield return new WaitForSeconds(6);
+//     SceneManager.LoadScene("MainMenuScene");
+
+     SceneManager.LoadScene("RoosWensveen_Scene");
+}
 }
