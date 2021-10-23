@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogText : MonoBehaviour
+public class WinGame : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
@@ -18,50 +18,27 @@ public class DialogText : MonoBehaviour
 public CharacterController cc;
 public GameObject help;
 bool visited = false;
+
 void Start() {
     canvas.gameObject.SetActive(false);
 textComponent.color = new Color(15, 98, 230, 255);
 }
-/*
-    void OnTriggerEnter (Collider other) {
-        if (other.gameObject.tag == "Player") {
-            Debug.Log("hoi");
-            O();
-        }
-    }
-*/
 
 public void O() {
 
-if(!visited) {
-help.GetComponent<PlayerCharacterController>().enabled = false;
-visited = true;
-}
+    if(!visited) {
+      help.GetComponent<PlayerCharacterController>().enabled = false;
+      visited = true;
+    }
+
     canvas.gameObject.SetActive(true);
     textComponent.text = string.Empty;
     StartDialogue(); 
-/*
-    Debug.Log("hoiiiiiii");
-
-    if(Input.anyKeyDown) 
-    {
-        if(textComponent.text == lines[index])
-        {
-            NextLine();
-        }
-        else 
-        {
-            StopAllCoroutines();
-            textComponent.text = lines[index];
-        }
-    }
-*/
 }
 
     // Update is called once per frame
    public void Update()
     {
-        //if(Input.anyKeyDown) 
         if(Input.GetKeyDown(KeyCode.K)) 
         {
           if(textComponent.text == lines[index])
@@ -93,6 +70,7 @@ visited = true;
 
     void NextLine()
     {
+Debug.Log(index);
       if (index < lines.Length - 1)
       {
         index++;
