@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 528546716365072993}
   - component: {fileID: 8924682559891268397}
   m_Layer: 0
-  m_Name: Projectile_Hoverbot
+  m_Name: Projectile_Choco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,7 +166,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 530af3a8082ffb14897ac6b74259b8a1, type: 2}
+  - {fileID: 2100000, guid: ea2753c7bb4b94c49b34dfc86bfa46ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
