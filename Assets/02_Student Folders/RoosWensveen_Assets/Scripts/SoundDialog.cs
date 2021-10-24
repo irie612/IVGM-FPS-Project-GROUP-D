@@ -8,13 +8,13 @@ public class SoundDialog : MonoBehaviour
     bool play;
     bool playOnce = true;
 
-   public void Start()
+    public void Start()
     {
         audioSource = GetComponent<AudioSource>();
         play = true;
     }
 
-   public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (play == true && playOnce == true)
         {

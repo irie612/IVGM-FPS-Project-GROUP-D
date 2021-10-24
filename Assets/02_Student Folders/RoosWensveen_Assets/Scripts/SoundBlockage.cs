@@ -6,13 +6,13 @@ public class SoundBlockage : MonoBehaviour
     bool play;
     bool playOnce = true;
 
-   public void Start()
+    public void Start()
     {
         audioSource = GetComponent<AudioSource>();
         play = true;
     }
 
-   public void Update()
+    public void Update()
     {
         if (play == true && playOnce == true)
         {

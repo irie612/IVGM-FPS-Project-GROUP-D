@@ -13,15 +13,15 @@ public class DialogText : MonoBehaviour
 
     public Transform player;
     private Rigidbody rb;
-    private bool beenDisplayed = false;
 
-public CharacterController cc;
-public GameObject help;
-bool visited = false;
-void Start() {
-    canvas.gameObject.SetActive(false);
-textComponent.color = new Color(15, 98, 230, 255);
-}
+    public CharacterController cc;
+    public GameObject help;
+    bool visited = false;
+
+    void Start() {
+        canvas.gameObject.SetActive(false);
+        textComponent.color = new Color(15, 98, 230, 255);
+    }
 /*
     void OnTriggerEnter (Collider other) {
         if (other.gameObject.tag == "Player") {
