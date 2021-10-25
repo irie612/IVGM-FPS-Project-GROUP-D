@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Imported/ChristmasCookies/Demo.unity.meta
 guid: 516be99cb1b031445907ca1ec075b771
 timeCreated: 1453238761
+========
+guid: 21b8b27e5362ba04eabd09175f625541
+timeCreated: 1511204968
+>>>>>>>> Julia_Level3_CandySharks:Assets/ChristmasCookies/Demo.unity.meta
 licenseType: Store
 DefaultImporter:
   userData: 
