@@ -9,13 +9,9 @@ public class WinGame : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     public GameObject canvas;
-    private int index;
-
-    public Transform player;
-    private Rigidbody rb;
-
-    public CharacterController cc;
     public GameObject goHelp;
+
+    private int index;
     bool visited = false;
 
     void Start() 
@@ -26,11 +22,11 @@ public class WinGame : MonoBehaviour
 
     public void O() 
     {
-        if(!visited) {
+        if(!visited) 
+        {
             goHelp.GetComponent<PlayerCharacterController>().enabled = false;
             visited = true;
         }
-
         canvas.gameObject.SetActive(true);
         textComponent.text = string.Empty;
         StartDialogue(); 
@@ -55,8 +51,8 @@ public class WinGame : MonoBehaviour
 
     void StartDialogue()
     {
-      index = 0; 
-      StartCoroutine(TypeLine());
+        index = 0; 
+        StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()

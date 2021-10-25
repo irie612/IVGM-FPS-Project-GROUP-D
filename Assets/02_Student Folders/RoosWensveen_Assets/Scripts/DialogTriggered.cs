@@ -5,7 +5,6 @@ using UnityEngine;
 public class DialogTriggered : MonoBehaviour
 {
 
-    public DialogText dt;
     public DialogText dialogtext;
     bool visited = false;
 

@@ -7,7 +7,6 @@ public class EndLevel : MonoBehaviour
 {
 
     public WinGame wingame;
-    //public GameObject gameObject;
     bool visited = false;
 
     // Update is called once per frame

@@ -14,7 +14,6 @@ public class Guiding : MonoBehaviour
     {
         nav = GetComponent<NavMeshAgent>();
         nav.updateRotation = false;
-
     }
 
     // Update is called once per frame
@@ -23,7 +22,6 @@ public class Guiding : MonoBehaviour
         if(player.position.x - transform.position.x < 0.5 || company) {
             company = true;
             nav.SetDestination(player.position);
-     //transform.LookAt(player.transform);
             if (nav.velocity.normalized != Vector3.zero) {
                 transform.rotation = Quaternion.LookRotation(nav.velocity.normalized);
             }

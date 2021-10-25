@@ -3386,12 +3386,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2041547763}
   m_PrefabAsset: {fileID: 0}
---- !u!143 &321130570 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 3122855503829242450, guid: 761cdc9e4e883334cbdcea062d0befa7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2041547763}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &322354248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 10ffc052a8e4bb8439b2ce53b6daf3a4,
@@ -6499,8 +6493,6 @@ MonoBehaviour:
   - You have completed this level!
   textSpeed: 0.15
   canvas: {fileID: 1721059140}
-  player: {fileID: 795911932}
-  cc: {fileID: 321130570}
   goHelp: {fileID: 321130565}
 --- !u!4 &669798205 stripped
 Transform:
@@ -11250,9 +11242,7 @@ MonoBehaviour:
   - Let's start. You need to learn how to fight. Shoot some lollipops!
   textSpeed: 0.15
   canvas: {fileID: 1348856942}
-  player: {fileID: 795911932}
-  cc: {fileID: 321130570}
-  help: {fileID: 321130565}
+  goHelp: {fileID: 321130565}
 --- !u!114 &1012104821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16824,8 +16814,6 @@ MonoBehaviour:
   - Shoot the cookies!
   textSpeed: 0.15
   canvas: {fileID: 1884039534}
-  player: {fileID: 795911932}
-  cc: {fileID: 321130570}
   goHelp: {fileID: 321130565}
 --- !u!114 &1585139535
 MonoBehaviour:
@@ -19712,7 +19700,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19a50efec584b441a42bdc55bbf42e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dt: {fileID: 0}
   dialogtext: {fileID: 1012104820}
 --- !u!82 &1882113204
 AudioSource:
