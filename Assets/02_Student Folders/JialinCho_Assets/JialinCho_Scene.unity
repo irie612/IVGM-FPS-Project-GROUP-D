@@ -4450,7 +4450,7 @@ PrefabInstance:
     - target: {fileID: 2707800222142829377, guid: d401b602eddc4e449b385a053f012a4c,
         type: 3}
       propertyPath: title
-      value: Unlock the next area
+      value: Find the exit
       objectReference: {fileID: 0}
     - target: {fileID: 2707800222142829377, guid: d401b602eddc4e449b385a053f012a4c,
         type: 3}
@@ -4460,12 +4460,12 @@ PrefabInstance:
     - target: {fileID: 2707800222142829377, guid: d401b602eddc4e449b385a053f012a4c,
         type: 3}
       propertyPath: description
-      value: Complete objectives and proceed to the next area
+      value: Defeat all the enemies and reach the end
       objectReference: {fileID: 0}
     - target: {fileID: 2707800222142829377, guid: d401b602eddc4e449b385a053f012a4c,
         type: 3}
       propertyPath: delayVisible
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2707800222142829387, guid: d401b602eddc4e449b385a053f012a4c,
         type: 3}
