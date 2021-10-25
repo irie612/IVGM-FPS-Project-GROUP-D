@@ -4886,7 +4886,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a0798aa25b2a35247b262820a588a364, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9887,8 +9886,7 @@ PrefabInstance:
     - target: {fileID: 3300000, guid: 93b1ab0ae86bdf7459bbdf258c9dec49, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -5414332994079535143, guid: 38f74cd884cda8242b4fdc167c4962f8,
-        type: 3}
+      objectReference: {fileID: 4300000, guid: 93b1ab0ae86bdf7459bbdf258c9dec49, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93b1ab0ae86bdf7459bbdf258c9dec49, type: 3}
 --- !u!4 &5649880935822330217 stripped
