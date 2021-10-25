@@ -1,26 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Guiding : MonoBehaviour
 {
     public Transform player;
-    private Rigidbody rb;
-    bool company = false;
+    NavMeshAgent nav;
+    bool company = false; 
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = this.GetComponent<Rigidbody>();
+        nav = GetComponent<NavMeshAgent>();
+        nav.updateRotation = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-      if(player.position.x - transform.position.x < 0.5 || company) {
-      company = true;
-      transform.rotation = Quaternion.Euler(player.rotation.eulerAngles.x, player.rotation.eulerAngles.y, player.rotation.eulerAngles.z);
-      transform.position = new Vector3(player.position.x-2, transform.position.y, player.position.z-3);
-      }
+        if(player.position.x - transform.position.x < 0.5 || company) {
+            company = true;
+            nav.SetDestination(player.position);
+            if (nav.velocity.normalized != Vector3.zero) {
+                transform.rotation = Quaternion.LookRotation(nav.velocity.normalized);
+            }
+        }
     }
 }

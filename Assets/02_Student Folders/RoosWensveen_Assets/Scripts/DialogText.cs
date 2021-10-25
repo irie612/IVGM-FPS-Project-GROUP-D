@@ -9,91 +9,73 @@ public class DialogText : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     public GameObject canvas;
+    public GameObject goHelp;
+
     private int index;
+    bool visited = false;
 
-    public Transform player;
-    private Rigidbody rb;
-    private bool beenDisplayed = false;
-
-void Start() {
-    canvas.gameObject.SetActive(false);
-}
-/*
-    void OnTriggerEnter (Collider other) {
-        if (other.gameObject.tag == "Player") {
-            Debug.Log("hoi");
-            O();
-        }
-    }
-*/
-
-public void O() {
-    canvas.gameObject.SetActive(true);
-    textComponent.text = string.Empty;
-    StartDialogue();
-
-/*
-    Debug.Log("hoiiiiiii");
-
-    if(Input.anyKeyDown) 
+    void Start() 
     {
-        if(textComponent.text == lines[index])
-        {
-            NextLine();
-        }
-        else 
-        {
-            StopAllCoroutines();
-            textComponent.text = lines[index];
-        }
+        canvas.gameObject.SetActive(false);
+        textComponent.color = new Color(15, 98, 230, 255);
     }
-*/
-}
+
+    public void O() 
+    {
+        if(!visited) 
+        {
+            goHelp.GetComponent<PlayerCharacterController>().enabled = false;
+            visited = true;
+        }
+        canvas.gameObject.SetActive(true);
+        textComponent.text = string.Empty;
+        StartDialogue(); 
+    }
 
     // Update is called once per frame
    public void Update()
     {
-        //if(Input.anyKeyDown) 
         if(Input.GetKeyDown(KeyCode.K)) 
         {
-          if(textComponent.text == lines[index])
-          {
-            NextLine();
-          }
-          else 
-          {
-            StopAllCoroutines();
-            textComponent.text = lines[index];
-          }
+            if(textComponent.text == lines[index])
+            {
+                NextLine();
+            }
+            else 
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
         }
     }
 
     void StartDialogue()
     {
-      index = 0;
-      StartCoroutine(TypeLine());
+        index = 0; 
+        StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
     {
-      foreach (char c in lines[index].ToCharArray())
-      {
-        textComponent.text += c;
-        yield return new WaitForSeconds(textSpeed);
-      }
+        foreach (char c in lines[index].ToCharArray())
+        {
+            textComponent.text += c;
+            yield return new WaitForSeconds(textSpeed);
+        }
     }
 
     void NextLine()
     {
-      if (index < lines.Length - 1)
-      {
-        index++;
-        textComponent.text = string.Empty;
-        StartCoroutine(TypeLine()); 
-      }
-      else
-      {
-        gameObject.SetActive(false); 
-      }
+        if (index < lines.Length - 1)
+        {
+            index++;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine()); 
+        }
+        else
+        {
+            gameObject.SetActive(false);
+            goHelp.GetComponent<PlayerCharacterController>().enabled = true;
+        }
     }
 }

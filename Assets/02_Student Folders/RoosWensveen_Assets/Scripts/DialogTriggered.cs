@@ -5,17 +5,13 @@ using UnityEngine;
 public class DialogTriggered : MonoBehaviour
 {
 
-//DialogText dt = new DialogText();
-public DialogText dt;
-
-public DialogText dialogtext;
+    public DialogText dialogtext;
+    bool visited = false;
 
     void OnTriggerEnter (Collider other) {
-        if (other.gameObject.tag == "Player") {
-            Debug.Log("hoi");
-            //dt.O();
-//dialogtext = GetComponent<DialogText>();
-dialogtext.O();
+        if (other.gameObject.tag == "Player" && !visited) {
+            dialogtext.O();
+            visited = true;
         }
     }
 }
