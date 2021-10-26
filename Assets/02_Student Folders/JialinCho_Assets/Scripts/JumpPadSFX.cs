@@ -8,6 +8,8 @@ public class JumpPadSFX : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        playSound.Play();
+        if (collision.gameObject.GetComponentInParent<PlayerCharacterController>() != null) {
+            playSound.Play();
+        }
     }
 }
