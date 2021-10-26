@@ -71,9 +71,9 @@ MonoBehaviour:
     m_Bits: 4294967295
   speed: 300
   gravityDownAcceleration: 0
-  trajectoryCorrectionDistance: -1
+  trajectoryCorrectionDistance: 5
   inheritWeaponVelocity: 0
-  damage: 40
+  damage: 15
   areaOfDamage: {fileID: 0}
   radiusColor: {r: 0, g: 0.2, b: 0.2, a: 0.2}
 --- !u!1001 &438767803125983511
