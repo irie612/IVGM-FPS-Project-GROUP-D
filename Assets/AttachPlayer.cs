@@ -8,7 +8,7 @@ public class AttachPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == Player)
+        if (other.gameObject == Player)
         {
             Player.transform.parent = transform;
         }
@@ -16,8 +16,8 @@ public class AttachPlayer : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
 
-    { 
-        if(other.gameObject == Player)
+    {
+        if (other.gameObject == Player)
         {
             Player.transform.parent = null;
         }
