@@ -30,7 +30,7 @@ public class GuidingAllVertices : MonoBehaviour
             gameObject.transform.position = player.transform.position + Vector3.back + Vector3.up;
             nav.SetDestination(player.position);
         } 
-        if(Vector3.Distance(player.transform.position, gameObject.transform.position) < followDistance || company) {
+        if(Vector3.Distance(player.transform.position, gameObject.transform.position) > followDistance || company) {
             company = true;
             nav.SetDestination(player.position);
             if (nav.velocity.normalized != Vector3.zero) {
