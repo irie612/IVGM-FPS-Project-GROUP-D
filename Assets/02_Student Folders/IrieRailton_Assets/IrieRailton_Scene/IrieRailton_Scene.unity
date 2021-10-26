@@ -8347,12 +8347,12 @@ PrefabInstance:
     - target: {fileID: 5794945255718112989, guid: 480005912bbe32d44ae790631c8e12ef,
         type: 3}
       propertyPath: numberOfWaves
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5794945255718112989, guid: 480005912bbe32d44ae790631c8e12ef,
         type: 3}
       propertyPath: enemiesPerWave
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5794945255718112991, guid: 480005912bbe32d44ae790631c8e12ef,
         type: 3}
@@ -28302,6 +28302,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 298744117520805562, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: startingWeapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 8323776800172828795, guid: 93dd527b23e56b840976501ebe6294cd,
+        type: 3}
     - target: {fileID: 814417836257332542, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: killHeight
@@ -28310,7 +28316,7 @@ PrefabInstance:
     - target: {fileID: 4205022973215787166, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: damageMultiplier
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6145509692674227223, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
