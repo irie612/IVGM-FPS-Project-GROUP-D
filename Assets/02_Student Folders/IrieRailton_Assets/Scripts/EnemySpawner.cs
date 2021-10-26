@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class EnemySpawner : MonoBehaviour
     [Tooltip("Number of Enemies per Wave")] public int enemiesPerWave;
 
     [Tooltip("EnemyPrefab")] public GameObject enemy;
+
+    [Tooltip("Sound to Play When Monument Crashes")] public AudioClip crashSound;
 
     private bool _spawning;
     private int _waveCounter;
@@ -46,8 +50,11 @@ public class EnemySpawner : MonoBehaviour
             {
                 if (_monumentReference.transform.rotation.eulerAngles.z < 90f)
                 {
-                    print(_monumentReference.transform.rotation.eulerAngles.y);
-                    _monumentReference.transform.Rotate(0f, 0f, 1f, Space.World);
+                    _monumentReference.transform.Rotate(0f, 0f, 0.2f, Space.World);
+                } 
+                else if (Math.Abs(_monumentReference.transform.rotation.eulerAngles.z - 90f) < 0.1)
+                {
+                    AudioSource.PlayClipAtPoint(crashSound, _monumentReference.transform.position);
                 }
             }
             else
