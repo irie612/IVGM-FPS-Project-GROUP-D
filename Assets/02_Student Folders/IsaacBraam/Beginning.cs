@@ -11,7 +11,8 @@ public class Beginning : MonoBehaviour
     public GameObject cameraVil;
     public GameObject ktext;
     private bool stop = false;
-    
+    public GameObject panel;
+
     public GameObject wall;
     // Start is called before the first frame update
     void Start()
@@ -65,11 +66,8 @@ public class Beginning : MonoBehaviour
                 ktext.SetActive(false);
                 stop = true;
                 wall.SetActive(false);
+                panel.SetActive(false);
             }
-
-           
-
-
 
         }
     }
