@@ -1,21 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+
 public class CloudMovement : MonoBehaviour
 {
-   [Range(-1f, 1f)]
-   public float horizontalSpeed;
+     public float horizontalSpeed;
  
-    [Range(0, 5)]
     public float verticalSpeed;
  
-    [Range(0, 2)]
     public float amplitude;
  
-    public Vector3 originalPos;
- 
-    public Vector3 tempPosition;
+    private Vector3 originalPos;
+    private Vector3 tempPosition;
  
  
     // Start is called before the first frame update
