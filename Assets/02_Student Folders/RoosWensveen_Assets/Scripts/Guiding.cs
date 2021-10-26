@@ -7,7 +7,10 @@ public class Guiding : MonoBehaviour
 {
     public Transform player;
     NavMeshAgent nav;
-    bool company = false; 
+    bool company = false;
+
+    [Tooltip("Max distance before teleport to player")]
+    public int teleportDistance = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +22,11 @@ public class Guiding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player.position.x - transform.position.x > teleportDistance)
+        {
+            gameObject.transform.position = player.transform.position + Vector3.back;
+            nav.SetDestination(player.position);
+        } 
         if(player.position.x - transform.position.x < 0.5 || company) {
             company = true;
             nav.SetDestination(player.position);

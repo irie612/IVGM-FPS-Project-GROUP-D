@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2945486441064244666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6280531571776681454}
+    m_Modifications:
+    - target: {fileID: 100000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_Name
+      value: GummyBear
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00767
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00474
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00101
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.44192043
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.058811814
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.057844907
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.89325327
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -8.935
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -127.599
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b190d5d010f36ec438a483fe1bef5575, type: 3}
+--- !u!1001 &8741519531231946111
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3855275510213298805, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855275510213298805, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855275510213298805, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855275510213298805, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855275510213298805, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7456506
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855275510213298805, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855275510213298805, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.66633725
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855275510213298805, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855275510213298805, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855275510213298805, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 83.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855275510213298805, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855275510213298809, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: m_Name
+      value: cookieEnemy Holding Gummy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5793026933725310085, guid: 41aced061402fca4c807e840bbff7210,
+        type: 3}
+      propertyPath: lootPrefab
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41aced061402fca4c807e840bbff7210, type: 3}
+--- !u!4 &6280531571776681454 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3348694065312419985, guid: 41aced061402fca4c807e840bbff7210,
+    type: 3}
+  m_PrefabInstance: {fileID: 8741519531231946111}
+  m_PrefabAsset: {fileID: 0}
