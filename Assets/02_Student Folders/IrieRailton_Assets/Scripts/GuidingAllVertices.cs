@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Guiding : MonoBehaviour
+public class GuidingAllVertices : MonoBehaviour
 {
     public Transform player;
     NavMeshAgent nav;
     bool company = false;
 
+    [Tooltip("Max distance before teleport to player")]
+    public int teleportDistance = 10;
+
+    [Tooltip("Max distance before follow player")]
+    public double followDistance = 0.5;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +25,12 @@ public class Guiding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.position.x - transform.position.x < 0.5 || company) {
+        if (Vector3.Distance(player.transform.position, gameObject.transform.position) > teleportDistance)
+        {
+            gameObject.transform.position = player.transform.position + Vector3.back + Vector3.up;
+            nav.SetDestination(player.position);
+        } 
+        if(Vector3.Distance(player.transform.position, gameObject.transform.position) < followDistance || company) {
             company = true;
             nav.SetDestination(player.position);
             if (nav.velocity.normalized != Vector3.zero) {

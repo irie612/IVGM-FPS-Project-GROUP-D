@@ -22949,9 +22949,9 @@ GameObject:
   - component: {fileID: 1967322507}
   - component: {fileID: 1967322506}
   - component: {fileID: 1967322505}
-  - component: {fileID: 1967322504}
   - component: {fileID: 1967322503}
   - component: {fileID: 1967322502}
+  - component: {fileID: 1967322504}
   m_Layer: 0
   m_Name: Guiding_Cookie_man
   m_TagString: Untagged
@@ -23004,11 +23004,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967322501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72dac5428ed7fbd41831e3a92eff02fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d8c9c9755c04ab2903c6f4a3a787e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1994904364}
-  teleportDistance: 10
+  teleportDistance: 20
+  followDistance: 0.5
 --- !u!54 &1967322505
 Rigidbody:
   m_ObjectHideFlags: 0
