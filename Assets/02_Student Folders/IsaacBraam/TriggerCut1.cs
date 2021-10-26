@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class TriggerCut1 : MonoBehaviour
 {
@@ -9,8 +10,11 @@ public class TriggerCut1 : MonoBehaviour
     public GameObject cookie;
     public GameObject explosion;
     public GameObject explosion2;
+    public GameObject explosion3;
     public GameObject switchIn;
     public GameObject camera;
+    public GameObject cookieman;
+    
 
     public GameObject[] Script = new GameObject[3];
     public GameObject panel;
@@ -41,6 +45,8 @@ public class TriggerCut1 : MonoBehaviour
         if(tur1 == null&& tur2 == null)
         {
             portal.SetActive(true);
+            explosion3.GetComponent<Exploder>().explosionTime = 1;
+            cookieman.SetActive(false);
         }
         if (!paused)
         {
@@ -52,6 +58,7 @@ public class TriggerCut1 : MonoBehaviour
             //float health = cookie.GetComponent<Health>().currentHealth;
             if (cookie == null)//cookie == null
             {
+                
                 switchIn.SetActive(true);
                 //(cookie.GetComponent("EnemyController")).enabled = false;
                 //cookie.GetComponent<EnemyController>().enabled = false;

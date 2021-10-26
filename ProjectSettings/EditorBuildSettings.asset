@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/02_Student Folders/RoosWensveen_Assets/RoosWensveen_Scene.unity
     guid: f53d0fdcdec72694da32f20c689a1220
   - enabled: 1
-    path: Assets/02_Student Folders/JialinCho_Assets/JialinCho_Scene.unity
+    path: Assets/02_Student Folders/JialinCho_Assets/JialinCho_Scene/JialinCho_Scene.unity
     guid: 39b96651d346dff42a3891c577c0e272
   - enabled: 1
     path: Assets/02_Student Folders/IrieRailton_Assets/IrieRailton_Scene/IrieRailton_Scene.unity
