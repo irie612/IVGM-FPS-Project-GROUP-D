@@ -14,6 +14,8 @@ public class EnemySpawner : MonoBehaviour
 
     private bool _spawning;
     private int _waveCounter;
+
+    private GameObject _monumentReference;
     
     private List<GameObject> _enemies;
     
@@ -23,6 +25,8 @@ public class EnemySpawner : MonoBehaviour
         _enemies = new List<GameObject>();
         _spawning = false;
         _waveCounter = 0;
+        _monumentReference = GameObject.Find("Monument Pivot");
+
     }
 
     // Update is called once per frame
@@ -38,10 +42,17 @@ public class EnemySpawner : MonoBehaviour
         UpdateEnemies();
         if (_waveCounter > 0 && _enemies.Count == 0)
         {
-            SetSpawning();
             if (_waveCounter == numberOfWaves)
             {
-                EndLevel();
+                if (_monumentReference.transform.rotation.eulerAngles.z < 90f)
+                {
+                    print(_monumentReference.transform.rotation.eulerAngles.y);
+                    _monumentReference.transform.Rotate(0f, 0f, 1f, Space.World);
+                }
+            }
+            else
+            {
+                SetSpawning();
             }
         }
     }
@@ -71,12 +82,5 @@ public class EnemySpawner : MonoBehaviour
     void UpdateEnemies()
     {
         _enemies = _enemies.Where(e => e != null).ToList();
-    }
-
-    void EndLevel()
-    {
-        _waveCounter = 0;
-        _spawning = false;
-        GameObject.Find("Monument Pivot").transform.Rotate(0f, 0f, 90f, Space.World);
     }
 }
