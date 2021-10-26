@@ -14,6 +14,9 @@ public class moveObjectOnDie : MonoBehaviour {
     [Tooltip("String that should be displayed when the object is moved")]
     public string displayMessage;
 
+    [Tooltip("Objects that should be disabled")]
+    public List<GameObject> objectsToDisable;
+
     private NotificationHUDManager m_NotificationHUDManager;
 
     // Start is called before the first frame update
@@ -33,9 +36,14 @@ public class moveObjectOnDie : MonoBehaviour {
     }
 
     void OnDie() {
-        Debug.Log("Moving object!");
         objectToMove.transform.position += distanceToMove;
         // Physics.SyncTransforms();
         m_NotificationHUDManager.CreateNotification(displayMessage);
+        for (var i = 0; i < objectsToDisable.Count; i++) {
+            objectsToDisable[i].SetActive(false);
+        }
+        // foreach (GameObject object in objectsToDisable) {
+        //     object.disabled = true;
+        // }
     }
 }
