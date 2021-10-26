@@ -53,7 +53,6 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnWave()
     {
-        print("Spawning Wave");
         _spawning = false;
         _waveCounter++;
         
@@ -76,7 +75,6 @@ public class EnemySpawner : MonoBehaviour
 
     void EndLevel()
     {
-        print("WE HERE");
         _waveCounter = 0;
         _spawning = false;
         GameObject.Find("Monument Pivot").transform.Rotate(0f, 0f, 90f, Space.World);
