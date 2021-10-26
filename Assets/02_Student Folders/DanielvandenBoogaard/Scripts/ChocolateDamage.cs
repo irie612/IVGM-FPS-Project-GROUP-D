@@ -15,6 +15,7 @@ public class ChocolateDamage : MonoBehaviour
     void Awake()
     {
         m_maxHealth = health;
+        gameObject.GetComponent<BoxCollider>().enabled = true;
     }
 
     public void InflictDamage(float damage)

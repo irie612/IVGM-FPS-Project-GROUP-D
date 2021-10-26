@@ -243,6 +243,7 @@ public class WeaponController : MonoBehaviour
         if (flame != null)
         {
             flame.SetActive(false);
+            m_wantsToShoot = false;
         }
 
         if (show && changeWeaponSFX)
@@ -357,11 +358,14 @@ public class WeaponController : MonoBehaviour
 
     void HandleShoot()
     {
+        int bulletsPerShotFinal = shootType == WeaponShootType.Charge ? Mathf.CeilToInt(currentCharge * bulletsPerShot) : bulletsPerShot;
+
         if (shootType == WeaponShootType.FlameThrower)
         {
+            bulletsPerShotFinal = 0;
             flame.SetActive(true);
             float offSet = 4f;
-            float coneAngle = 0.75f;
+            float coneAngle = 0.90f;
             Collider[] hits = Physics.OverlapSphere(weaponMuzzle.position, range); //get all colliders within sphere
             foreach (var hitCollider in hits)
             {
@@ -369,16 +373,25 @@ public class WeaponController : MonoBehaviour
                 {
                     if(Vector3.Dot((hitCollider.transform.position - (weaponMuzzle.position + (-weaponMuzzle.forward * offSet))).normalized, weaponMuzzle.forward) > coneAngle)
                     {
-                        hitCollider.GetComponent<Damageable>().InflictDamage(2, false, this.owner);
+                        RaycastHit hit;
+                        if (Physics.Linecast(weaponMuzzle.position, hitCollider.transform.position, out hit))
+                        {
+                            if (hit.transform.GetComponent<Damageable>())
+                            {
+                                hitCollider.GetComponent<Damageable>().InflictDamage(2, false, this.owner);
+                            }
+                        }
                     }
                 }
                 else if (hitCollider.GetComponent<ChocolateDamage>())
                 {
-                    hitCollider.GetComponent<ChocolateDamage>().InflictDamage(4);
+                    if(Vector3.Dot((hitCollider.transform.position - (weaponMuzzle.position + (-weaponMuzzle.forward * offSet))).normalized, weaponMuzzle.forward) > coneAngle)
+                    {
+                        hitCollider.GetComponent<ChocolateDamage>().InflictDamage(4);
+                    }
                 }
             }
         }
-        int bulletsPerShotFinal = shootType == WeaponShootType.Charge ? Mathf.CeilToInt(currentCharge * bulletsPerShot) : bulletsPerShot;
 
         // spawn all bullets with random direction
         for (int i = 0; i < bulletsPerShotFinal; i++)
