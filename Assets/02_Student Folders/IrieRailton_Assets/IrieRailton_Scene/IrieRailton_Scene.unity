@@ -23008,7 +23008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1994904364}
-  teleportDistance: 20
+  teleportDistance: 10
 --- !u!54 &1967322505
 Rigidbody:
   m_ObjectHideFlags: 0

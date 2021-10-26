@@ -22,11 +22,9 @@ public class Guiding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.position.x - transform.position.x > teleportDistance ||
-            player.position.y - transform.position.y > teleportDistance || 
-            player.position.z - transform.position.z > teleportDistance)
+        if (Vector3.Distance(player.transform.position, gameObject.transform.position) > teleportDistance)
         {
-            gameObject.transform.position = player.transform.position + Vector3.back;
+            gameObject.transform.position = player.transform.position + Vector3.back + Vector3.up;
             nav.SetDestination(player.position);
         } 
         if(player.position.x - transform.position.x < 0.5 || company) {
