@@ -243,6 +243,7 @@ public class WeaponController : MonoBehaviour
         if (flame != null)
         {
             flame.SetActive(false);
+            m_wantsToShoot = false;
         }
 
         if (show && changeWeaponSFX)
@@ -364,7 +365,7 @@ public class WeaponController : MonoBehaviour
             bulletsPerShotFinal = 0;
             flame.SetActive(true);
             float offSet = 4f;
-            float coneAngle = 1f;
+            float coneAngle = 0.90f;
             Collider[] hits = Physics.OverlapSphere(weaponMuzzle.position, range); //get all colliders within sphere
             foreach (var hitCollider in hits)
             {
@@ -384,7 +385,10 @@ public class WeaponController : MonoBehaviour
                 }
                 else if (hitCollider.GetComponent<ChocolateDamage>())
                 {
-                    hitCollider.GetComponent<ChocolateDamage>().InflictDamage(4);
+                    if(Vector3.Dot((hitCollider.transform.position - (weaponMuzzle.position + (-weaponMuzzle.forward * offSet))).normalized, weaponMuzzle.forward) > coneAngle)
+                    {
+                        hitCollider.GetComponent<ChocolateDamage>().InflictDamage(4);
+                    }
                 }
             }
         }
