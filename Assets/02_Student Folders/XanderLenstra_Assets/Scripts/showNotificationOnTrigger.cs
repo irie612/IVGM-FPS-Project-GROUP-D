@@ -8,11 +8,17 @@ public class showNotificationOnTrigger : MonoBehaviour {
     [Tooltip("Text to be shown")]
     public string displayText;
 
+    [Tooltip("Timeout after activation before next activation (in seconds)")]
+    public float showingTimeOut;
+
     private Collider m_Collider;
 
     private NotificationHUDManager m_NotificationHUDManager;
 
-    private bool shownOnce = false;
+    private float? timeSinceLastShown = null;
+
+    public bool showAtAll = true;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -27,17 +33,18 @@ public class showNotificationOnTrigger : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+        if (timeSinceLastShown != null)
+            timeSinceLastShown += Time.deltaTime;
     }
 
     void OnTriggerEnter(Collider other) {
-        if (shownOnce) return;
+        if (timeSinceLastShown < showingTimeOut || timeSinceLastShown == -1) return;
         PlayerCharacterController enteringPlayer = other.GetComponent<PlayerCharacterController>();
 
         // Check if the entering entity is actually a player
         if (enteringPlayer != null) {
             m_NotificationHUDManager.CreateNotification(displayText);
-            shownOnce = true;
+            timeSinceLastShown = 0;
         }
     }
 }
