@@ -25,6 +25,6 @@ public class EndLevel : MonoBehaviour
 
     private IEnumerator WaitForSceneLoad() {
         yield return new WaitForSeconds(6);
-        SceneManager.LoadScene("RoosWensveen_Scene");
+        SceneManager.LoadScene("JialinCho_Scene");
     }
 }
