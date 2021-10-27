@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/02_Student Folders/JialinCho_Assets/JialinCho_Scene/JialinCho_Scene.unity
     guid: 39b96651d346dff42a3891c577c0e272
   - enabled: 1
+    path: Assets/02_Student Folders/JuliaMestrum_Assets/JuliaMestrum_Scene.unity
+    guid: 4a24f4db48e839a4283a23e91fad8484
+  - enabled: 1
     path: Assets/02_Student Folders/IrieRailton_Assets/IrieRailton_Scene/IrieRailton_Scene.unity
     guid: edeb75178faf84541a59338f706edf92
   - enabled: 1
