@@ -32,6 +32,10 @@ public class TriggerCut1 : MonoBehaviour
     public GameObject tur1;
     public GameObject tur2;
     public GameObject portal;
+    public GameObject sound1;
+    public GameObject sound2;
+    public GameObject soundboss;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +51,8 @@ public class TriggerCut1 : MonoBehaviour
             portal.SetActive(true);
             explosion3.GetComponent<Exploder>().explosionTime = 1;
             cookieman.SetActive(false);
+            sound2.SetActive(true);
+            soundboss.SetActive(false);
         }
         if (!paused)
         {
@@ -80,6 +86,7 @@ public class TriggerCut1 : MonoBehaviour
         explosion.GetComponent<Exploder>().explosionTime = 1;
         explosion2.GetComponent<Exploder>().explosionTime = 1;
         StartCoroutine(ExampleCoroutine2());
+        sound1.SetActive(true);
     }
 
     IEnumerator ExampleCoroutine2()
@@ -100,7 +107,8 @@ public class TriggerCut1 : MonoBehaviour
         Script[2].SetActive(false);
         panel.SetActive(false);
         player1.position = player2.position;
-        
+        soundboss.SetActive(true);
+
     }
 
 
