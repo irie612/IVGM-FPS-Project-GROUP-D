@@ -54363,6 +54363,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 298744117520805562, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: startingWeapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 8323776800172828795, guid: 93dd527b23e56b840976501ebe6294cd,
+        type: 3}
     - target: {fileID: 6145509692674227223, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: lookSensitivity

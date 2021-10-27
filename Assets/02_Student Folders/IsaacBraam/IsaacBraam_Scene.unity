@@ -3035,7 +3035,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: pres K to continue...
+  m_Text: press K to continue...
 --- !u!222 &197832963
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15849,6 +15849,12 @@ PrefabInstance:
       propertyPath: startingWeapons.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 298744117520805562, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: startingWeapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 8323776800172828795, guid: c7ea8fd5a2c39a350b6038ea3bf9df1a,
+        type: 3}
     - target: {fileID: 298744117520805562, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: startingWeapons.Array.data[1]
