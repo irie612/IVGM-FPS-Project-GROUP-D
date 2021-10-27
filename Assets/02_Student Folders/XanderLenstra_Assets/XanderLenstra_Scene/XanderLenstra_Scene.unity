@@ -27913,6 +27913,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cookie_man
       objectReference: {fileID: 0}
+    - target: {fileID: 5902693353076319333, guid: 99cfbd9cdead68e45b3b51cc712e775c,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300010, guid: de2cabe101284624abab21c5fdfb6f8c, type: 3}
+    - target: {fileID: 5902693353077339339, guid: 99cfbd9cdead68e45b3b51cc712e775c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e66e21edff8172f46b1aea3ee5734dd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99cfbd9cdead68e45b3b51cc712e775c, type: 3}
 --- !u!4 &1678022800 stripped
@@ -28142,11 +28152,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1688375094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69febddddc6a4effdb794a6400631d3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ccdbd60cd74c09488ba1ab27ca6cccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: The door is locked, maybe there is a key in the storage silo's to
-    the left?
+  displayText: The door is locked! Maybe there is a key in the storage to the left?
   showingTimeOut: 5
   showAtAll: 1
 --- !u!65 &1688375097
