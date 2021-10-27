@@ -10698,6 +10698,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cookie_man
       objectReference: {fileID: 0}
+    - target: {fileID: 5902693353076319333, guid: 99cfbd9cdead68e45b3b51cc712e775c,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300010, guid: de2cabe101284624abab21c5fdfb6f8c, type: 3}
+    - target: {fileID: 5902693353077339339, guid: 99cfbd9cdead68e45b3b51cc712e775c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e66e21edff8172f46b1aea3ee5734dd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99cfbd9cdead68e45b3b51cc712e775c, type: 3}
 --- !u!4 &961359652 stripped
