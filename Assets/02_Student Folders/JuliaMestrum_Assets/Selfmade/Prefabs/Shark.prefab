@@ -91,9 +91,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1881703774079546739}
   - component: {fileID: 7965487146565653242}
-  - component: {fileID: 1891347169825445183}
-  - component: {fileID: 3259658164661466301}
   - component: {fileID: 4825506628214168451}
+  - component: {fileID: 856015281581775563}
+  - component: {fileID: 5416534505893696429}
   m_Layer: 0
   m_Name: shark 1
   m_TagString: Untagged
@@ -124,37 +124,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249457734189166537}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.433404, y: 1.5933449, z: 4.74923}
-  m_Center: {x: 0.8373822, y: 0.5834885, z: -0.029689208}
---- !u!65 &1891347169825445183
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249457734189166537}
-  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.738458, y: 1.107506, z: 4.3956017}
-  m_Center: {x: 0.7685517, y: 1.8759022, z: -0.020945454}
---- !u!114 &3259658164661466301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249457734189166537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb87e64010fd7e94a846912a91dbf981, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 7253983127304857660, guid: 761cdc9e4e883334cbdcea062d0befa7, type: 3}
+  m_Size: {x: 9.903331, y: 2.134367, z: 4.74923}
+  m_Center: {x: 0.60241884, y: 0.25477222, z: -0.029689236}
 --- !u!95 &4825506628214168451
 Animator:
   serializedVersion: 3
@@ -174,6 +148,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &856015281581775563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249457734189166537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb87e64010fd7e94a846912a91dbf981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+--- !u!65 &5416534505893696429
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249457734189166537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.903331, y: 0.9845059, z: 4.74923}
+  m_Center: {x: 0.60241884, y: 1.820941, z: -0.029689237}
 --- !u!1 &2940508339554107421
 GameObject:
   m_ObjectHideFlags: 0
