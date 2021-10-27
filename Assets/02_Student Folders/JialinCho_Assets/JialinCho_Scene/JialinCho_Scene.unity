@@ -3347,10 +3347,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 744353943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72dac5428ed7fbd41831e3a92eff02fe, type: 3}
+  m_Script: {fileID: 11500000, guid: cc96cdc87688b9bd9ac386710bcaefa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1627662180}
+  teleportDistance: 25
+  followDistance: 0.5
 --- !u!54 &744353945
 Rigidbody:
   m_ObjectHideFlags: 0
