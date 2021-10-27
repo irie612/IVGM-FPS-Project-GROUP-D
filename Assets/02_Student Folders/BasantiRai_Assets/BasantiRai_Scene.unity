@@ -13428,7 +13428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1867303486}
-  teleportDistance: 10
+  teleportDistance: 25
   followDistance: 0.5
 --- !u!1 &1873572857
 GameObject:
