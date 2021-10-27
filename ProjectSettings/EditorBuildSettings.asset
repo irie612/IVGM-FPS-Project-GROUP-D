@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/02_Student Folders/DanielvandenBoogaard/DanielvandenBoogard.unity
     guid: 24b4e0de66a575e4dbbe542629aee814
   - enabled: 1
+    path: Assets/02_Student Folders/XanderLenstra_Assets/XanderLenstra_Scene/XanderLenstra_Scene.unity
+    guid: 482a1fe88750ea3b0b19a64bf3132794
+  - enabled: 1
     path: Assets/02_Student Folders/IsaacBraam/IsaacBraam_Scene.unity
     guid: 2f95f961a8cf3a94e9724dc2680defe3
   m_configObjects: {}
